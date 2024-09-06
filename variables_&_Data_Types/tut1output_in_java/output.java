@@ -50,7 +50,6 @@ public class output{
 }
 
 
-*/
 public class output{
     public static void main(String args[]){
         System.out.print("hello world\n");
@@ -58,4 +57,5 @@ public class output{
         System.out.print("hello ram\n");
     }
 }
+*/
 
