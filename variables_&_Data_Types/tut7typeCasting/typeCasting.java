@@ -1,5 +1,5 @@
 /* *********************************** Type Casting / narrowing / explicit ***************************
-here we discuss how to convert larg size data type in low size data type
+here we discuss how to convert large size data type in low size data type
 
 
  */
@@ -16,8 +16,8 @@ public class typeCasting{
         System.out.println(marks);
 
         char ch = 'a';
-        int myint = ch;
-        System.out.println(myint);
+        int myInt = ch;
+        System.out.println(myInt);
 
     }
 }
