@@ -220,13 +220,13 @@
 // }
 
 
-/* ************************************************
+/* ************************************************ butterfly pattern
 
  */
 
 // public class Task{
 //     public static void main(String args[]){
-//         int range = 10;
+//         int range = 4;
 //         int half = range/2;
 //         for(int i=1; i<=range;i++){
 //             if(i<=half){
@@ -272,119 +272,208 @@
 // }
 
 
+// ******************** OR **************************
+
+// public class Task{
+//     public static void main(String args[]){
+//         int range = 5;
+//         for(int i=1; i<=range; i++){
+//             for(int j=1; j<=i; j++){
+//                 System.out.print("*");
+//             }
+//             for(int k=1; k<=(2*range)-(2*i); k++){
+//                 System.out.print(" ");
+//             }
+//             for(int l=1; l<=i;l++){
+//                 System.out.print("*");
+//             }
+//             System.out.println();
+//         }
+//         for(int i=range; i>=1; i--){
+//             for(int j=1; j<=i; j++){
+//                 System.out.print("*");
+//             }
+//             for(int k=1; k<=(2*range)-(2*i); k++){
+//                 System.out.print(" ");
+//             }
+//             for(int l=1; l<=i;l++){
+//                 System.out.print("*");
+//             }
+//             System.out.println();
+//         }
+//     }
+// }
 
 
-/*
-public class Task{
-    public static void main(String args[]){
-        int range =5;
-        for(int i=1;i<=range;i++){
-            for(int j=1;j<=range-i;j++){
-                System.out.print(" ");
-            }
-            for(int k=1;k<=i;k++){
-                System.out.print("*");
-            }
-for(int l=1;l<=range-i;l++){
-                System.out.print("*");
-            }
-            for(int k=1;k<=i;k++){
-                System.out.print(" ");
-            }
+
+
+// ***************************************** SOLID RHOMBUS PATTERN
+// public class Task{
+//     public static void main(String args[]){
+//         int range =5;
+//         for(int i=1;i<=range;i++){
+//             for(int j=1;j<=range-i;j++){
+//                 System.out.print(" ");
+//             }
+//             for(int k=1;k<=i;k++){
+//                 System.out.print("*");
+//             }
+// for(int l=1;l<=range-i;l++){
+//                 System.out.print("*");
+//             }
+//             for(int k=1;k<=i;k++){
+//                 System.out.print(" ");
+//             }
             
-            System.out.println();
-        }
-    }
-}
+//             System.out.println();
+//         }
+//     }
+// }
+// *********************** OR 
 
-*/
+// public class Task{
+//     public static void main(String args[]){
+//         int range =5;
+//         for(int i=1; i<=range;i++){
+//             for(int j=1; j<=range-i; j++){
+//                 System.out.print(" ");
+//             }
+//             for(int k=1; k<=range; k++){
+//                 System.out.print("*");
+//             }
+//             System.out.println();
+//         }
+//     }
+// }
 
-/*
-public class Task{
-    public static void main(String args[]){
-        int range =5;
-        for(int i=1;i<=range;i++){
-            for(int j=1;j<=range-i;j++){
-                System.out.print(" ");
-            }
-            for(int k=1;k<=i;k++){
-                if(i==1 || i==range){
-                    System.out.print("*");
-                }else{
-                    if(k==1){
-                        System.out.print("*");
-                    }else{
-                        System.out.print(" ");
-                    }
-                }
+// ********************************* hollow rhombus pattern
+
+// public class Task{
+//     public static void main(String args[]){
+//         int range =5;
+//         for(int i=1;i<=range;i++){
+//             for(int j=1;j<=range-i;j++){
+//                 System.out.print(" ");
+//             }
+//             for(int k=1;k<=i;k++){
+//                 if(i==1 || i==range){
+//                     System.out.print("*");
+//                 }else{
+//                     if(k==1){
+//                         System.out.print("*");
+//                     }else{
+//                         System.out.print(" ");
+//                     }
+//                 }
                
-            }
-for(int l=1;l<=range-i;l++){
-    if(i==1 || i==range){
-        System.out.print("*");
-    }else{
-        if(l==range-i){
-            System.out.print("*");
-        }else{
-            System.out.print(" ");
-        }
-    }
+//             }
+// for(int l=1;l<=range-i;l++){
+//     if(i==1 || i==range){
+//         System.out.print("*");
+//     }else{
+//         if(l==range-i){
+//             System.out.print("*");
+//         }else{
+//             System.out.print(" ");
+//         }
+//     }
                 
-            }
-            for(int k=1;k<=i;k++){
-                System.out.print(" ");
-            }
+//             }
+//             for(int k=1;k<=i;k++){
+//                 System.out.print(" ");
+//             }
             
-            System.out.println();
-        }
-    }
-}
-*/
+//             System.out.println();
+//         }
+//     }
+// }
 
-/*
+// ************ OR 
+// public class Task{
+//     public static void main(String args[] ){
+//         int range = 5;
+//         for(int i=1; i<=range; i++){
+//             for(int j=1; j<=range-i; j++){
+//                 System.out.print(" ");
+//             }
+//             for(int k=1; k<=range; k++){
+//                 if(i==1 || i==range || k==1 || k==range){
+//                     System.out.print("*");
+//                 }else{
+//                     System.out.print(" ");
+//                 }
+//             }
+//             System.out.println();
+//         }
+//     }
+// }
+
+// ******************************* diamond pattern
+// public class Task{
+//     public static void main(String args[]){
+//         for(int i=1;i<=4;i++){
+//             for(int j=1;j<=4-i;j++){
+//                 System.out.print(" ");
+//             }
+//             for(int k=1;k<=2*i-1;k++){
+//                 System.out.print("*");
+//             }
+//             System.out.println();
+//         }
+//         for(int l=1;l<=4;l++){
+//             for(int m=1;m<l;m++){
+//                 System.out.print(" ");
+//             }
+//             for(int n=4*2-(2*l-1);n>=1;n--){
+//                 System.out.print("*");
+//             }
+            
+//             System.out.println();
+//         }
+//     }
+// }
+
 public class Task{
     public static void main(String args[]){
-        for(int i=1;i<=4;i++){
-            for(int j=1;j<=4-i;j++){
+        int range = 5;
+        for(int i=1; i<=range; i++){
+            for(int j=1; j<=range-i; j++){
                 System.out.print(" ");
             }
-            for(int k=1;k<=2*i-1;k++){
+            for(int k=1; k<=(2*i)-1; k++){
                 System.out.print("*");
             }
             System.out.println();
         }
-        for(int l=1;l<=4;l++){
-            for(int m=1;m<l;m++){
+        for(int i=range; i>=1; i--){
+            for(int j=1; j<=range-i; j++){
                 System.out.print(" ");
             }
-            for(int n=4*2-(2*l-1);n>=1;n--){
+            for(int k=1; k<=(2*i)-1; k++){
                 System.out.print("*");
             }
-            
             System.out.println();
         }
     }
 }
 
-*/
 
 
-/*
-public class Task{
-    public static void main(String args []){
-        int range =5;
-        for(int i=1;i<=range;i++){
-            for(int k=1;k<=range-i;k++){
-                System.out.print(" ");
-            }
-            for(int j=1;j<=i;j++){
-                System.out.print(i+" ");
-            }
-            System.out.println();
-        }
-    }
-}
-*/
+
+// public class Task{
+//     public static void main(String args []){
+//         int range =5;
+//         for(int i=1;i<=range;i++){
+//             for(int k=1;k<=range-i;k++){
+//                 System.out.print(" ");
+//             }
+//             for(int j=1;j<=i;j++){
+//                 System.out.print(i+" ");
+//             }
+//             System.out.println();
+//         }
+//     }
+// }
 
 
 /*
