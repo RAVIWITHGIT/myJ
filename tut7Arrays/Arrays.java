@@ -182,3 +182,33 @@ public class Array
 //         System.out.println(trapeRainWater(height));
 //     }
 // }
+
+
+// *************** best time for buy and sell stock
+import java.util.*;
+
+public class Arrays{
+    public static void buyAndSellStock(int arr[]){
+        int buyPrice = Integer.MAX_VALUE;
+        int sellingPrice = Integer.MIN_VALUE;
+        int maxProfit = 0;
+        for(int i=0; i<arr.length; i++){
+            if(buyPrice<arr[i]){
+                int profit = arr[i]-buyPrice;
+                sellingPrice = Math.max(sellingPrice,arr[i]);
+                maxProfit = Math.max(profit,maxProfit);
+            }
+            else{
+                buyPrice = arr[i];
+            }
+        }
+        System.out.println("max Profit "+maxProfit);
+        System.out.println("buyPrice "+buyPrice);
+        System.out.println("sellingPrice "+sellingPrice);
+
+    }
+    public static void main(String args[]){
+        int prices[]= {7,1,5,3,6,4};
+        buyAndSellStock(prices);
+    }
+}
