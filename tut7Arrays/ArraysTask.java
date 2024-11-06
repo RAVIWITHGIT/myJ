@@ -15,6 +15,7 @@
 // public static int search(int[] nums, int target) {
 // // min will have index of minimum element of nums
 // int min = minSearch(nums);
+// System.out.println(min);
 // // find in sorted left
 // if (nums[min] <= target && target <= nums[nums.length - 1]) {
 // return search(nums, min, nums.length - 1, target);
@@ -61,9 +62,11 @@
 // }
 
 // public static void main(String args[]) {
-// int arr[] = { 4, 5, 6, 7, 0, 1, 2 };
+// // int arr[] = { 4, 5, 6, 7, 0, 1, 2 };
 // // int arr[] = { 50, 10, 20, 30, 40 };
-// int findNum = 1;
+// int arr[] = { 30, 40, 50, 10, 20 };
+// ;
+// int findNum = 5;
 // System.out.println(search(arr, findNum));
 // }
 // }
@@ -109,55 +112,55 @@
 
 // import java.util.*;
 
-// public class ArraysTask {
-// public static int trapWater(int arr[]) {
-// int leftHight[] = new int[arr.length];
-// int rightHight[] = new int[arr.length];
-// int totalTrap = 0;
+public class ArraysTask {
+    public static int trapWater(int arr[]) {
+        int leftHight[] = new int[arr.length];
+        int rightHight[] = new int[arr.length];
+        int totalTrap = 0;
 
-// leftHight[0] = arr[0];
-// rightHight[arr.length - 1] = arr[arr.length - 1];
-// for (int i = 1; i < arr.length; i++) {
-// leftHight[i] = Math.max(leftHight[i - 1], arr[i]);
-// }
-// for (int i = arr.length - 2; i > -1; i--) {
-// rightHight[i] = Math.max(rightHight[i + 1], arr[i]);
-// }
+        leftHight[0] = arr[0];
+        rightHight[arr.length - 1] = arr[arr.length - 1];
+        for (int i = 1; i < arr.length; i++) {
+            leftHight[i] = Math.max(leftHight[i - 1], arr[i]);
+        }
+        for (int i = arr.length - 2; i > -1; i--) {
+            rightHight[i] = Math.max(rightHight[i + 1], arr[i]);
+        }
 
-// for (int i = 0; i < arr.length; i++) {
-// int minHight = Math.min(leftHight[i], rightHight[i]);
-// totalTrap += (minHight - arr[i]) * 1;
-// }
-// return totalTrap;
+        for (int i = 0; i < arr.length; i++) {
+            int minHight = Math.min(leftHight[i], rightHight[i]);
+            totalTrap += (minHight - arr[i]) * 1;
+        }
+        return totalTrap;
 
-// }
+    }
 
-// public static int trap(int height[]) {
-// int n = height.length;
-// int res = 0, l = 0, r = n - 1;
-// int rMax = height[r], lMax = height[l];
-// while (l < r) {
-// if (lMax < rMax) {
-// l++;
-// lMax = Math.max(lMax, height[l]);
-// res += lMax - height[l];
-// } else {
-// r--;
-// rMax = Math.max(rMax, height[r]);
-// res += rMax - height[r];
-// }
-// }
-// return res;
+    public static int trap(int height[]) {
+        int n = height.length;
+        int res = 0, l = 0, r = n - 1;
+        int rMax = height[r], lMax = height[l];
+        while (l < r) {
+            if (lMax < rMax) {
+                l++;
+                lMax = Math.max(lMax, height[l]);
+                res += lMax - height[l];
+            } else {
+                r--;
+                rMax = Math.max(rMax, height[r]);
+                res += rMax - height[r];
+            }
+        }
+        return res;
 
-// }
+    }
 
-// public static void main(String args[]) {
-// int hight[] = { 0, 1, 0, 2, 1, 0, 1, 3, 2, 1, 2, 1 };
-// System.out.println(trapWater(hight));
-// System.out.println(trap(hight));
+    public static void main(String args[]) {
+        int hight[] = { 0, 1, 0, 2, 1, 0, 1, 3, 2, 1, 2, 1 };
+        System.out.println(trapWater(hight));
+        System.out.println(trap(hight));
 
-// }
-// }
+    }
+}
 
 /*
  * Question 5:Given an integer array nums, return all the triplets [nums[i],
