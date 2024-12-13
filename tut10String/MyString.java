@@ -46,6 +46,46 @@ public class MyString {
         return sb.toString();
     }
 
+    // *********** use normal string
+    // public static String stringCompression(String str) {
+    // String newStr = "";
+    // for (int i = 0; i < str.length(); i++) {
+    // int count = 1;
+    // Character ch = str.charAt(i);
+    // while (i < str.length() - 1 && str.charAt(i) == str.charAt(i + 1)) {
+    // count++;
+    // i++;
+    // }
+    // newStr += ch;
+    // if (count > 1) {
+    // newStr += count;
+    // }
+
+    // }
+    // return newStr;
+    // }
+
+    // ******* use stringBuilder
+    public static String stringCompression(String str) {
+        // String newStr = "";
+        StringBuilder newStr = new StringBuilder("");
+        for (int i = 0; i < str.length(); i++) {
+            int count = 1;
+            Character ch = str.charAt(i);
+            while (i < str.length() - 1 && str.charAt(i) == str.charAt(i + 1)) {
+                count++;
+                i++;
+            }
+            newStr.append(ch);
+            if (count > 1) {
+                // newStr += count;
+                newStr.append(count);
+            }
+
+        }
+        return newStr.toString();
+    }
+
     public static void main(String[] args) {
         /*
          * *** we can create string in two way
@@ -121,13 +161,30 @@ public class MyString {
         // sb.append(" Lakshakar ");
         // System.out.println(sb);
 
-        // find string length --> .length();
+        // for (char ch = 'a'; ch < 'z'; ch++) {
+        // System.out.print(ch + " ");
+        // }
+        // System.out.println();
+        // *** find string length --> .length();
         String direction = "WNEENESENNN";
-        // shortestPath(direction);
+        // ***** shortestPath(direction);
 
+        // ******* convert string to UpperCase
         String str = "hello my name is ravi";
         String getResult = Convert_Letter_To_UpperCase(str);
-        System.out.println(getResult);
+        // System.out.println(getResult);
+
+        /******************************************************************
+         * String Compression ***************
+         * 
+         * 
+         * if string look like --> aaabbccdd then show --> a3b2c2d2
+         * if string look like --> abc then show --> abc , not a1b1c1 because here want
+         * to compress
+         * 
+         */
+        String compressString = stringCompression("aaabbccdd");
+        System.out.println(compressString);
 
     }
 }
