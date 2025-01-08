@@ -1,0 +1,2 @@
+compile java file , command  is --> PS C:\myJ> javac .\tut11BitManipulation\tut7isPowerOfTwo.java    
+run compile file , command is --> PS C:\myJ> java tut11BitManipulation.tut7isPowerOfTwo
