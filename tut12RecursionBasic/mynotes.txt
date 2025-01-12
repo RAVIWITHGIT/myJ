@@ -1,0 +1,37 @@
+Recursion is a programming technique in which a method calls itself in order to solve a problem. It typically involves breaking down a problem into smaller, more manageable sub-problems. Each call to the method processes part of the problem, and the recursion continues until a base condition is met, at which point the method stops calling itself.
+
+
+Steps Involved in Recursion
+1.Base Case: Define a condition under which the recursion will stop. This prevents infinite loops and eventual stack overflow.
+2.Recursive Case: Define how the method calls itself with modified arguments, which should bring it closer to the base case. in sort what work do 
+3.Function Call: When the function is called, it performs its task, calls itself for the sub-problem, and eventually aggregates the results.
+
+
+************************************************* EXAMPLE **********************************************
+public class tut1DecreasingOrder {
+    
+    // Step 1: Base Case
+    public static void DecreasingOrder(int n) {
+        // If n equals 1, we stop the recursion
+        if (n == 1) {
+            System.out.print(1 + " ");
+            return; // Stops the recursion here
+        }
+
+        // Step 2: Recursive Case
+        System.out.print(n + " "); // Print the current number
+        DecreasingOrder(n - 1); // Call itself with n decreased by 1
+    }
+
+    public static void main(String args[]) {
+        DecreasingOrder(10); // Step 3: Initial function call
+    }
+}
+
+Breakdown of Steps
+1.Base Case:
+     The base case is defined by the condition if (n == 1). When n reaches 1, the method prints 1 and returns, stopping further recursive calls. This prevents an infinite loop and stack overflow.
+2.Recursive Case:
+     The method prints the current value of n and then calls itself with n - 1. This reduces the problem size with each call, moving towards the base case.
+3.Function Call:
+     In the main method, the initial call is made with DecreasingOrder(10). This starts the recursion, and the method will print numbers from 10 down to 1.
