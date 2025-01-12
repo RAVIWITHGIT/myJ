@@ -12,7 +12,7 @@ public class tut2IncreasingOrder {
      * 7. if condition false then again call IncreasingOrder() with n-1 value
      * 8. This process will continue until it finds the base case.
      * 9. after get base case , mean n==1 then if condition run and print n which is
-     * 1
+     * ===>1
      * 10. after print n return from this function
      * 
      * 
