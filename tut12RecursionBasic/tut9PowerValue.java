@@ -8,6 +8,7 @@ public class tut9PowerValue {
 
     }
 
+    // Optimize code
     public static int PowerValue2(int value, int power) {
         if (power == 0) {
             return 1;
