@@ -12,15 +12,9 @@ public class tut12FriendsPairing {
             return n;
         }
 
-        // single -->3-1 is 2 . so memeber is 2 a,b , so these can stand along and stand
-        // in pair ,
-        // that why give 2
         int fnm1 = friendsPairing(n - 1);
 
-        // pair
         int fnm2 = friendsPairing(n - 2);
-        System.out.println(fnm1 + " fnm1");
-        System.out.println(fnm2 + " fnm2");
         int pairWays = (n - 1) * fnm2;
 
         // totalWays
