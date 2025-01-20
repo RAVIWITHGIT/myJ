@@ -34,11 +34,34 @@ public class tut14Practice {
         System.out.print(digits[lastDigit] + " ");
     }
 
+    /*
+     ***************************************************** Question 3 :
+     * Write a program to find Length of a String using Recursion
+     * 
+     */
+
+    public static void Question3(String str, String newStr, int index) {
+        if (str.equals(newStr)) {
+            System.out.println("the length of this String is " + index);
+            return;
+        }
+        newStr = newStr + str.charAt(index);
+        index = index + 1;
+        Question3(str, newStr, index);
+        // System.out.println(str.charAt(4));
+    }
+
     public static void main(String args[]) {
-        String arr[] = { " zero ", " one ", " two ", " three ", " four ", " five ", " six ", " seven ", " eight ",
-                " nine " };
-        int num = 2019;
-        Question2(arr, num, "");
-        printDigits(num, arr);
+
+        // ******************************************* Question 2
+        // String arr[] = { " zero ", " one ", " two ", " three ", " four ", " five ", "
+        // six ", " seven ", " eight ",
+        // " nine " };
+        // int num = 2019;
+        // Question2(arr, num, "");
+        // printDigits(num, arr);
+
+        // *************************************** Question 3
+        Question3(new String("ravi lakshakar"), "", 0);
     }
 }
