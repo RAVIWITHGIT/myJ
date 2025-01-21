@@ -51,6 +51,29 @@ public class tut14Practice {
         // System.out.println(str.charAt(4));
     }
 
+    public static int length(String str) {
+        if (str.length() == 0) {
+            return 0;
+        }
+        return length(str.substring(1)) + 1;
+    }
+
+    /*
+     * *********************************************** Question 4
+     * We are given a string S,we need to find the count of all contiguous
+     * substrings starting and ending with the same character.
+     * Sample Input 1: S = "abcab"
+     * Sample Output 1: 7
+     * There are 15 substrings of "abcab" : a, ab, abc, abca, abcab, b, bc, bca,
+     * bcab, c, ca, cab, a, ab, b Out of the above substrings,there are 7
+     * substrings:a,abca,b,bcab,c,aandb.So,only 7 contiguous substrings start and
+     * end with the same character.
+     * 
+     */
+    public static int contiguousSubstrings(String str, int firstIndex, int SecondIndex) {
+        return 0;
+    }
+
     public static void main(String args[]) {
 
         // ******************************************* Question 2
@@ -63,5 +86,13 @@ public class tut14Practice {
 
         // *************************************** Question 3
         Question3(new String("ravi lakshakar"), "", 0);
+        System.out.println(length("ravi"));
+        String str = "ravi";
+        System.out.println(str.substring(1));
+
+        // ************************************** Question 4
+        String str2 = "abcab";
+        System.out.println(contiguousSubstrings(str2, 0, 0));
+
     }
 }
