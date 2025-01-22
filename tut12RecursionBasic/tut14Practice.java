@@ -70,9 +70,6 @@ public class tut14Practice {
      * end with the same character.
      * 
      */
-    public static int contiguousSubstrings(String str, int firstIndex, int SecondIndex) {
-        return 0;
-    }
 
     public static void main(String args[]) {
 
@@ -91,8 +88,6 @@ public class tut14Practice {
         System.out.println(str.substring(1));
 
         // ************************************** Question 4
-        String str2 = "abcab";
-        System.out.println(contiguousSubstrings(str2, 0, 0));
 
     }
 }
